@@ -365,3 +365,52 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.video {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  &__container {
+  }
+
+  &__image-ibg {
+    display: block;
+    padding-bottom: percent(600, 1500);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(240, 345);
+    }
+  }
+}
+.play {
+  position: relative;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+
+  transition: color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #004d43;
+
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &::before {
+    content: "\e90f";
+    @extend %ic;
+    @include adaptiveValue("font-size", 100, 60);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  img {
+    transition: transform 0.3s ease 0s;
+  }
+}

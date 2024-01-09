@@ -1,3 +1,111 @@
 //====================================================================================================
 
+.hero {
+  @include adaptiveValue("padding-top", 50, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  &__container {
+    display: grid;
+    @include adaptiveValue("gap", 40, 20);
+  }
+
+  &__title {
+    color: #000;
+    font-family: "TT Hoves";
+    @include adaptiveValue("font-size", 55, 30);
+    font-weight: 500;
+    line-height: 117.2%; /* 68/58 */
+    text-transform: uppercase;
+
+    span {
+      color: #004d43;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(500, 1500);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(200, 345);
+    }
+  }
+
+  &__link {
+    @media (min-width: $mobile) {
+      position: absolute;
+      @include adaptiveValue("left", 50, 15, 0, 1500, 991);
+      @include adaptiveValue("bottom", 100, 15, 0, 1500, 991);
+
+      color: #004d43;
+      background-color: #fff;
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      margin-top: toRem(10);
+      width: 100%;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: toRem(20);
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(280), 1fr));
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(10);
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-hero {
+  position: relative;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(250, 284);
+  }
+
+  &__text {
+    color: #fff;
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 300;
+    line-height: 125%; /* 20/16 */
+    background-color: #004d43;
+    padding: toRem(7) toRem(25);
+
+    @media (max-width: $mobile) {
+      flex: 1 1 auto;
+      padding: toRem(7) toRem(10);
+    }
+    @media (min-width: $mobile) {
+      position: absolute;
+      @include adaptiveValue("top", 20, 15, 0, 1500, 991);
+      @include adaptiveValue("left", 20, 15, 0, 1500, 991);
+    }
+  }
+}
+
 //====================================================================================================

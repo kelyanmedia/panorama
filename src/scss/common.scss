@@ -23,6 +23,11 @@
   @include adaptiveValue("font-size", 30, 18);
   font-weight: 300;
   line-height: 130%; /* 39px */
+
+  span {
+    color: #004d43;
+  }
+
   &_white {
     color: #fff;
   }

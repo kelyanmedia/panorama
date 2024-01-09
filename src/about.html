@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="about-hero">
+                <div class="about-hero__container">
+                    <div class="about-hero__body">
+                        <div class="about-hero__image-ibg"><img src="@img/about/bg.jpg" alt="" loading="lazy"></div>
+
+                        <div class="about-hero__content">
+                            <h1 class="about-hero__title">PANARAMA </h1>
+                            <div class="about-hero__text text text_white">Двери, в которые хочется входить <br> Окна, в которые хочется смотреть</div>
+                        </div>
+                    </div>
+
+                    <div class="about-hero__texts text">
+                        <p>Мы предлагаем широкий выбор качественных и стильных дверей и окон, которые помогут вам создать <span>уют и комфорт в вашем доме.</span> </p>
+                        <p>Независимо от того, ищете ли вы современные двери, классические окна или эксклюзивные дизайнерские решения, в нашем ассортименте вы найдете <span>идеальное решение для вашего интерьера.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

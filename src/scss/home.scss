@@ -109,3 +109,44 @@
 }
 
 //====================================================================================================
+
+.partners {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 40, 30);
+  }
+
+  &__items {
+  }
+
+  &__wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+
+    // @media (min-width: $mobile) {
+    //   &.swiper-wrapper {
+    //     display: grid;
+    //     @include adaptiveValue("column-gap", 20, 15);
+    //     row-gap: toRem(20);
+    //     grid-template-columns: repeat(5, 1fr);
+    //     grid-template-columns: repeat(auto-fill, minmax(toRem(280), 1fr));
+    //   }
+    // }
+  }
+
+  &__item {
+    padding: toRem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: toRem(1) solid #d3d3d3;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

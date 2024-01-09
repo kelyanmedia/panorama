@@ -25,6 +25,7 @@
   }
 
   &__title {
+    text-transform: uppercase;
     @include adaptiveValue("margin-bottom", 40, 25);
   }
 

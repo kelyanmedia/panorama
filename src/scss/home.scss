@@ -414,3 +414,39 @@
     transition: transform 0.3s ease 0s;
   }
 }
+
+//========================================================================================================================================================
+.text-banner {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  &__container {
+  }
+
+  &__body {
+    background-color: #004d43;
+    @include adaptiveValue("padding-top", 50, 30);
+    @include adaptiveValue("padding-bottom", 50, 30);
+
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__content {
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 60, 30);
+    max-width: toRem(1208);
+    text-align: center;
+  }
+
+  &__link {
+  }
+}
+.button {
+  &_white {
+  }
+}

@@ -1,38 +1,50 @@
 .checkbox {
-	position: relative;
-	&:not(:last-child) {
-		margin-bottom: em(5);
-	}
-	// .checkbox__input
-	&__input {
-		position: absolute;
-		width: 0;
-		height: 0;
-		opacity: 0;
-		&:focus-visible + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
-		}
-		&:checked + .checkbox__label:before {
-			background: #000;
-		}
-	}
-	// .checkbox__label
-	&__label {
-		cursor: pointer;
-		display: inline-flex;
-		position: relative;
-		gap: 10px;
-		&:before {
-			content: "";
-			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
-		}
-	}
-	// .checkbox__text
-	&__text {
-		align-self: center;
-	}
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: em(5);
+  }
+  // .checkbox__input
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    &:focus-visible + .checkbox__label:before {
+      //   box-shadow: 0 0 5px #000;
+    }
+    &:checked + .checkbox__label:before {
+      background: #004d43;
+    }
+  }
+  // .checkbox__label
+  &__label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    &:before {
+      content: "";
+      flex: 0 0 toRem(15);
+      width: toRem(15);
+      height: toRem(15);
+      border: toRem(2) solid #d3d3d3;
+    }
+  }
+
+  &__image-ibg {
+    width: toRem(20);
+    height: toRem(8);
+  }
+
+  // .checkbox__text
+  &__text {
+    align-self: center;
+
+    color: #000;
+    font-family: "Inter Tight";
+    font-size: toRem(15);
+    font-weight: 300;
+    line-height: 125%; /* 15/12 */
+  }
 }

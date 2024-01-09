@@ -45,5 +45,17 @@ function pageLoad() {
     if (htmlTag.closest(".open-cart") && targetElement.closest("[data-cart-form]")) {
       htmlTag.classList.add("open-cart-form")
     }
+
+    ///
+
+    if (targetElement.closest("[data-filter]")) {
+      bodyLock()
+      htmlTag.classList.add("open-filter")
+    }
+
+    if (targetElement.closest("[data-filter-close]")) {
+      htmlTag.classList.remove("open-filter")
+      bodyUnlock()
+    }
   })
 }

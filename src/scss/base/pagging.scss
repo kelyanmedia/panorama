@@ -1,19 +1,58 @@
 .pagging {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// .pagging__arrow
-	&__arrow {
-	}
-	// .pagging__list
-	&__list {
-		display: flex;
-		li {
-		}
-	}
-	// .pagging__item
-	&__item {
-		&._active {
-		}
-	}
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @include adaptiveValue("gap", 20, 10);
+
+  color: #d3d3d3;
+  font-family: "Inter Tight";
+  font-size: toRem(20);
+  font-weight: 300;
+  // .pagging__arrow
+  &__arrow {
+    width: toRem(48);
+    @include adaptiveValue("height", 64, 50);
+
+    border: toRem(1) solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: toRem(1) solid #000;
+        color: #000;
+      }
+    }
+  }
+  // .pagging__list
+  &__list {
+    display: flex;
+    @include adaptiveValue("gap", 20, 10);
+    li {
+    }
+  }
+  // .pagging__item
+  &__item {
+    @include adaptiveValue("width", 48, 40);
+    @include adaptiveValue("height", 64, 50);
+
+    border: toRem(1) solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: toRem(1) solid #000;
+        color: #000;
+      }
+    }
+    &._active {
+      border: toRem(1) solid #000;
+      color: #000;
+    }
+  }
 }

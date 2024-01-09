@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="hero">
+				<div class="hero__container">
+					<h1 class="hero__title title">Каталог</h1>
+					<div class="hero__body">
+						<div class="hero__image-ibg"><img src="@img/hero/02.jpg" alt="" loading="lazy"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="catalog">
+				<div class="catalog__container">
+					<div class="catalog__body">
+
+						<div class="catalog__filters filters">
+							<div class="filters__open">
+								<div class="filters__open-title _icon-filter" data-filter>Фильтр</div>
+							</div>
+							<div class="filters__wrapper">
+								<div class="filters__wrapper-top">
+									<div class="filters__wrapper-title">Фильтр</div>
+									<button class="filters__wrapper-close _icon-close" data-filter-close></button>
+								</div>
+								<div class="filters__body">
+									<ul class="filters__list">
+										<li class="filters__item"><a href="#" class="filters__link active">Все товары</a></li>
+										<li class="filters__item"><a href="#" class="filters__link">Входные двери</a></li>
+										<li class="filters__item"><a href="#" class="filters__link">Межкомнатные двери</a></li>
+										<li class="filters__item"><a href="#" class="filters__link">Напольные покрытия</a></li>
+										<li class="filters__item"><a href="#" class="filters__link">Окна премиум</a></li>
+										<li class="filters__item"><a href="#" class="filters__link">Автоматические ворота</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="catalog__content">
+
+							<div class="catalog__category category" data-spollers="767,max" data-da=".filters__wrapper,767">
+								<div class="category__item">
+									<div class="category__title _icon-arrow-bottom" data-spoller>Серия</div>
+									<div class="category__list">
+										<div class="category__checkbox checkbox">
+											<input id="a_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="a_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+										</div>
+										<div class="category__checkbox checkbox">
+											<input id="a_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="a_2" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+										</div>
+									</div>
+								</div>
+								<div class="category__item">
+									<div class="category__title _icon-arrow-bottom" data-spoller>Цвет</div>
+									<div class="category__list">
+										<div class="category__checkbox checkbox">
+											<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label">
+												<div class="checkbox__image-ibg"><img src="@img/catalog/color1.svg" alt="" loading="lazy"></div>
+												<span class="checkbox__text">Манхэттен</span>
+											</label>
+										</div>
+										<div class="category__checkbox checkbox">
+											<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_2" class="checkbox__label">
+												<div class="checkbox__image-ibg"><img src="@img/catalog/color2.svg" alt="" loading="lazy"></div>
+												<span class="checkbox__text">Магнолия</span>
+											</label>
+										</div>
+										<div class="category__checkbox checkbox">
+											<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_3" class="checkbox__label">
+												<div class="checkbox__image-ibg"><img src="@img/catalog/color1.svg" alt="" loading="lazy"></div>
+												<span class="checkbox__text">Дуб светлый</span>
+											</label>
+										</div>
+										<div class="category__checkbox checkbox">
+											<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_4" class="checkbox__label">
+												<div class="checkbox__image-ibg"><img src="@img/catalog/color2.svg" alt="" loading="lazy"></div>
+												<span class="checkbox__text">Дуб темный</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="category__item">
+									<div class="category__title _icon-arrow-bottom" data-spoller>Цена</div>
+									<div class="category__list">
+										<div class="filters__range range">
+											<input gata-value autocomplete="off" type="text" name="price" placeholder="0 - 100 000 000 сум" class="range__input">
+											<div class="range__line" gata-range data-from="0" data-to="100000000"></div>
+											<div class="range__bottom">
+												<span>0</span>
+												<span>100.000.000 сум</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="category__item category__item_sort">
+									<div class="category__title" data-spoller>Сортировать: по популярности</div>
+									<div class="category__list">
+										<div class="category__checkbox checkbox">
+											<input id="b_1" class="checkbox__input" type="radio" value="1" name="form[]">
+											<label for="b_1" class="checkbox__label"><span class="checkbox__text">по популярности</span></label>
+										</div>
+										<div class="category__checkbox checkbox">
+											<input id="b_2" class="checkbox__input" type="radio" value="1" name="form[]">
+											<label for="b_2" class="checkbox__label"><span class="checkbox__text">по убыванию</span></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="catalog__items">
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/01.png" alt="" loading="lazy"></a>
+
+										<div class="item-products__labels">
+											<!-- or add "new" class -->
+											<div class="item-products__label">-15%</div>
+										</div>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/02.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/03.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/04.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/04.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/03.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/04.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+								<article class="catalog__item item-products">
+									<div class="item-products__image-ibg--contain">
+										<a href="#"><img src="@img/products/04.png" alt="" loading="lazy"></a>
+									</div>
+									<div class="item-products__content">
+										<h3 class="item-products__title"><a href="#">Межкомнатная дверь Ni 3</a></h3>
+										<p class="item-products__text">Царговые двери с гладким однотонным покрытием</p>
+										<div class="item-products__price price">
+											<div class="price__curr">700 000 сум</div>
+											<div class="price__old">800 000 сум</div>
+										</div>
+										<div class="item-products__buttons">
+											<a href="#" class="item-products__button button-black button-black_line">Подробнее</a>
+											<button class="item-products__button button-black">В корзину</button>
+										</div>
+									</div>
+								</article>
+							</div>
+							@@include('html/_pagging.htm',{})
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			@@include('html/_products.htm',{})
+
+			<!--
+				<section class="test">
+					<div class="test__container">
+						<div class="test__body">
+
+						</div>
+					</div>
+				</section>
+			-->
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

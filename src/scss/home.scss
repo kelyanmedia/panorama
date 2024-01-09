@@ -8,7 +8,7 @@
     @include adaptiveValue("gap", 40, 20);
   }
 
-  &__title {
+  &__maintitle {
     color: #000;
     font-family: "TT Hoves";
     @include adaptiveValue("font-size", 55, 30);
@@ -19,6 +19,10 @@
     span {
       color: #004d43;
     }
+  }
+
+  &__title {
+    text-transform: uppercase;
   }
 
   &__body {
@@ -211,6 +215,8 @@
 }
 
 .item-products {
+  display: flex;
+  flex-direction: column;
   &__image-ibg--contain {
     position: relative;
     padding-bottom: percent(384, 284);
@@ -246,6 +252,10 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 auto;
   }
 
   &__title {
@@ -253,6 +263,8 @@
     font-weight: 600;
     line-height: 120%; /* 24/20 */
     margin-bottom: toRem(10);
+
+    flex: 1 1 auto;
   }
 
   &__text {

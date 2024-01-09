@@ -9,7 +9,7 @@
 
   background-color: #004d43;
 
-  @include adaptiveValue("height", 66, 55);
+  @include adaptiveValue("height", 66, 55, 0, 1500, 767);
 
   color: #fff;
   font-family: "Inter Tight";
@@ -34,6 +34,43 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.button-black {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: toRem(5) toRem(10);
+
+  color: #fff;
+  font-family: "Inter Tight";
+  font-size: toRem(16);
+  font-weight: 300;
+
+  height: toRem(49);
+
+  border: toRem(1) solid #000;
+  background-color: #000;
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
+  }
+  &_line {
+    background-color: transparent;
+    color: #000;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #000;
+        color: #fff;
       }
     }
   }

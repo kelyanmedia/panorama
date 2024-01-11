@@ -1,5 +1,5 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { bodyLock, bodyUnlock, isMobile } from "./functions.js"
+import { bodyLock, bodyLockStatus, bodyUnlock, isMobile } from "./functions.js"
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js"
 
@@ -14,7 +14,8 @@ function pageLoad() {
     let catalog = document.querySelector("[data-catalog]")
 
     if (catalog && targetElement.closest("[data-catalog-open]")) {
-      bodyLock()
+      // bodyLock()
+
       htmlTag.classList.toggle("open-catalog")
     }
     // || htmlTag.closest('.open-catalog') && !targetElement.closest(".catalog-header__body") && !targetElement.closest('[data-catalog-open]')
@@ -24,7 +25,6 @@ function pageLoad() {
       !targetElement.closest("[data-catalog-open]")
     ) {
       htmlTag.classList.toggle("open-catalog")
-      bodyUnlock()
     }
 
     /////

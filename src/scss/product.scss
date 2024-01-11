@@ -1,0 +1,94 @@
+.product {
+  @include adaptiveValue("padding-top", 35, 15);
+  @include adaptiveValue("padding-bottom", 80, 35);
+  &__container {
+    display: grid;
+    @include adaptiveValue("gap", 60, 30);
+  }
+
+  &__back {
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 60, 15, 0, 1530, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-ibg--contain {
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(650, 1500);
+      padding-bottom: percent(700, 1500);
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: percent(390, 345);
+    }
+  }
+
+  &__content {
+    @media (min-width: $mobile) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__lines {
+    color: rgba(0, 0, 0, 0.5);
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: toRem(10);
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__price {
+    @include adaptiveValue("margin-bottom", 60, 25);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(10);
+  }
+
+  &__button {
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__characteristics {
+  }
+}
+
+.characteristics {
+  display: grid;
+  @include adaptiveValue("gap", 30, 20);
+  &__title {
+    font-weight: 300;
+  }
+
+  &__text {
+  }
+
+  &__lines {
+    color: rgba(0, 0, 0, 0.5);
+    p {
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+  }
+}

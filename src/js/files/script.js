@@ -35,7 +35,9 @@ function pageLoad() {
     }
 
     if (
-      (htmlTag.closest(".open-cart") && !targetElement.closest(".cart") && !targetElement.closest("[data-cart]")) ||
+      (htmlTag.closest(".open-cart") &&
+        !targetElement.closest(".cart__wrapper") &&
+        !targetElement.closest("[data-cart]")) ||
       targetElement.closest("[data-cart-close]")
     ) {
       htmlTag.classList.remove("open-cart", "open-cart-form")

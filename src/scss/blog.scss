@@ -7,6 +7,7 @@
   }
 
   &__title {
+    text-transform: uppercase;
   }
   &__top {
     display: flex;
@@ -28,6 +29,13 @@
     align-self: flex-end;
   }
 
+  &__items {
+    display: grid;
+    column-gap: toRem(20);
+    row-gap: toRem(40);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(330), 1fr));
+  }
+
   &__slider {
     @media (min-width: $pc) {
       overflow: hidden;
@@ -44,6 +52,7 @@
     margin-right: auto;
     margin-left: auto;
     @include adaptiveValue("margin-top", 60, 30);
+    padding: toRem(15) toRem(50);
 
     @media (max-width: $mobile) {
       width: 100%;
@@ -99,5 +108,66 @@
     font-size: 14px;
     font-weight: 300;
     line-height: 120%; /* 16.8px */
+  }
+}
+
+//========================================================================================================================================================
+
+.blog-article {
+  padding-top: toRem(15);
+  @include adaptiveValue("padding-bottom", 50, 30);
+  &__container {
+    max-width: toRem(829);
+  }
+
+  &__body {
+    img {
+      max-width: 100%;
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 30);
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #000;
+      font-family: "Inter Tight";
+      @include adaptiveValue("font-size", 24, 20);
+      font-weight: 600;
+      line-height: 130%; /* 31.2px */
+
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 20);
+      }
+    }
+
+    p {
+      color: #000;
+      text-align: justify;
+      font-family: "Inter Tight";
+      @include adaptiveValue("font-size", 24, 16);
+      font-weight: 300;
+      line-height: 130%; /* 31.2px */
+
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 15);
+      }
+    }
+  }
+
+  &__date {
+    color: #131010;
+    font-family: "Inter Tight";
+    font-size: toRem(14);
+    font-weight: 300;
+    line-height: 130%; /* 18.2px */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
   }
 }

@@ -1,0 +1,109 @@
+.contacts {
+  &__container {
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 60, 45);
+  }
+
+  &__item {
+    display: grid;
+    gap: toRem(30);
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 20, 13);
+
+    color: #000;
+    font-family: "Inter Tight";
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 300;
+    line-height: 130%; /* 39px */
+
+    @media (max-width: $tablet) {
+      &:last-child {
+        max-width: toRem(320);
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      @include adaptiveValue("gap", 20, 13);
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: toRem(10);
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      transition: color 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #004d43;
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: toRem(1);
+        bottom: toRem(3);
+        left: 0;
+
+        background-color: #004d43;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+      }
+    }
+  }
+
+  &__title {
+    color: #000;
+    @include adaptiveValue("font-size", 30, 22);
+    font-weight: 600;
+    line-height: 130%; /* 39px */
+
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+
+    &::before {
+      flex: 0 0 toRem(40);
+      width: toRem(40);
+      height: toRem(40);
+
+      @media (max-width: $mobile) {
+        flex: 0 0 toRem(30);
+        width: toRem(30);
+        height: toRem(30);
+      }
+      color: #004d43;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include adaptiveValue("font-size", 30, 20);
+    }
+  }
+}

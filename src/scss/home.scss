@@ -217,6 +217,7 @@
 .item-products {
   display: flex;
   flex-direction: column;
+
   &__image-ibg--contain {
     position: relative;
     padding-bottom: percent(384, 284);
@@ -306,6 +307,20 @@
   align-items: center;
   column-gap: toRem(20);
   row-gap: toRem(10);
+
+  &_big {
+    @include adaptiveValue("font-size", 48, 22);
+    @include adaptiveValue("column-gap", 60, 20, 0, 1530, 991);
+    justify-content: flex-start;
+
+    .price__old {
+      color: #d3d3d3;
+      &::before {
+        background-color: #d3d3d3;
+      }
+    }
+  }
+
   &__curr {
   }
 

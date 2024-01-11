@@ -16,6 +16,22 @@
   }
 }
 
+.maintitle {
+  color: #000;
+  font-family: "TT Hoves";
+  @include adaptiveValue("font-size", 78, 30);
+  font-weight: 500;
+  line-height: 118.8%; /* 57/48 */
+
+  span {
+    color: #004d43;
+  }
+
+  &_white {
+    color: #fff;
+  }
+}
+
 .text {
   color: #000;
   text-align: justify;
@@ -75,6 +91,34 @@
 }
 
 .button-next {
+}
+
+//========================================================================================================================================================
+
+.back {
+  color: #000;
+  font-family: "Inter Tight";
+  @include adaptiveValue("font-size", 20, 16);
+  font-weight: 400;
+  line-height: 120%; /* 24/20 */
+
+  display: flex;
+  align-items: center;
+  gap: toRem(10);
+
+  &::before {
+    content: "\e901";
+    @extend %ic;
+
+    font-size: toRem(12);
+  }
+
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #004d43;
+    }
+  }
 }
 
 //========================================================================================================================================================

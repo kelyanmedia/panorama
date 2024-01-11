@@ -7,6 +7,7 @@
   align-items: center;
   padding: toRem(15) toRem(50);
 
+  border: toRem(1) solid #004d43;
   background-color: #004d43;
 
   @include adaptiveValue("height", 66, 55, 0, 1500, 767);
@@ -34,6 +35,17 @@
     @media (any-hover: hover) {
       &:hover {
         background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &_line {
+    background-color: transparent;
+    color: #004d43;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #004d43;
+        color: #fff;
       }
     }
   }

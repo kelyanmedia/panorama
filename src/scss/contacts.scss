@@ -4,7 +4,14 @@
 
   &__items {
     display: grid;
-    @include adaptiveValue("gap", 60, 45);
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("row-gap", 60, 45);
+    }
+
+    @media (max-width: $tablet) {
+      row-gap: toRem(60);
+    }
   }
 
   &__item {

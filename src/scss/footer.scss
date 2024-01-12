@@ -6,6 +6,8 @@
   @include adaptiveValue("padding-top", 70, 35);
   @include adaptiveValue("padding-bottom", 70, 35);
   &__container {
+    padding-right: toRem(20);
+    padding-left: toRem(20);
   }
 
   &__body {

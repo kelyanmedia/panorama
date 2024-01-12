@@ -251,7 +251,7 @@
     column-gap: toRem(10);
 
     @media (max-width: $mobile) {
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 
     &._spoller-active::before {
@@ -261,6 +261,10 @@
     &::before {
       font-size: toRem(12);
       transition: transform 0.3s ease 0s;
+
+      @media (max-width: $mobile) {
+        margin-left: auto;
+      }
     }
   }
 

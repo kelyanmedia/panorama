@@ -3,7 +3,7 @@
 .title {
   color: #000;
   font-family: "TT Hoves";
-  @include adaptiveValue("font-size", 48, 28);
+  @include adaptiveValue("font-size", 48, 24);
   font-weight: 500;
   line-height: 118.8%; /* 57/48 */
 
@@ -63,8 +63,8 @@
   gap: toRem(10);
   &__button {
     pointer-events: all;
-    width: toRem(55);
-    height: toRem(55);
+    @include adaptiveValue("width", 55, 40);
+    @include adaptiveValue("height", 55, 40);
     display: flex;
     justify-content: center;
     align-items: center;

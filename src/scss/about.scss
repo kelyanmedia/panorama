@@ -1,6 +1,6 @@
 .about {
-  @include adaptiveValue("padding-top", 60, 30);
-  @include adaptiveValue("padding-bottom", 60, 30);
+  @include adaptiveValue("padding-top", 60, 35);
+  @include adaptiveValue("padding-bottom", 60, 35);
   &__container {
     display: grid;
     @include adaptiveValue("gap", 60, 30);
@@ -60,8 +60,8 @@
 //========================================================================================================================================================
 
 .about-hero {
-  @include adaptiveValue("padding-top", 50, 30);
-  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-top", 50, 35);
+  @include adaptiveValue("padding-bottom", 50, 35);
 
   &__container {
     display: grid;

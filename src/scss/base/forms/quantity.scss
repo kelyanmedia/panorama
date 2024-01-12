@@ -13,6 +13,11 @@
   display: flex;
   border: 1px solid #d3d3d3;
 
+  @media (max-width: $mobile) {
+    width: toRem(75);
+    height: toRem(45);
+  }
+
   // .quantity__button
   &__button {
     color: #130b0b;
@@ -23,6 +28,11 @@
 
     flex: 0 0 toRem(13);
     position: relative;
+
+    @media (max-width: $mobile) {
+      flex: 0 0 toRem(20);
+    }
+
     cursor: pointer;
     &::before,
     &::after {

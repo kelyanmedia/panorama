@@ -1,6 +1,6 @@
 .blog {
-  @include adaptiveValue("padding-top", 60, 30);
-  @include adaptiveValue("padding-bottom", 60, 30);
+  @include adaptiveValue("padding-top", 60, 35);
+  @include adaptiveValue("padding-bottom", 60, 35);
   &__container {
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@
 
 .blog-article {
   padding-top: toRem(15);
-  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-bottom", 50, 35);
   &__container {
     max-width: toRem(829);
   }

@@ -1,10 +1,99 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__top">
+				<div class="popup__maintitle">Быстрый заказ</div>
 			</div>
+
+			<div class="popup__items">
+				<div class="popup__item item-cart">
+					<div class="item-cart__image-ibg--contain"><img src="@img/header/01.jpg" alt="" loading="lazy"></div>
+					<div class="item-cart__content">
+						<div class="item-cart__content-text">
+							<div class="item-cart__article">Артикул: 115361736</div>
+							<div class="item-cart__text">Бренд</div>
+							<div class="item-cart__text">Межкомнатная дверь</div>
+							<div class="item-cart__lines">
+								<div class="item-cart__line">Категория: -</div>
+								<div class="item-cart__line">Серия: Никель </div>
+								<div class="item-cart__line">Цвет: зеленый</div>
+							</div>
+						</div>
+						<div data-quantity class="quantity">
+							<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+							<div class="quantity__input"><input data-quantity-value autocomplete="off" type="text" name="form[]" value="1"></div>
+							<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+						</div>
+						<div class="item-cart__last">
+							<button class="item-cart__delete _icon-delete"></button>
+							<div class="item-cart__price">100 000 сум</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<form action="#" class="popup__form popup-contact">
+				<div class="popup-contact__title">Личные данные:</div>
+				<div class="popup-contact__subtitle">*Все поля обязательны к заполнению</div>
+				<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя*" class="popup-contact__input">
+				<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон*" class="popup-contact__input">
+
+				<div class="popup-contact__title">Удобный способ связи:</div>
+				<div class="popup-contact__bottom">
+					<div class="popup__radio radio">
+						<input id="c_1" data-error="Ошибка" class="radio__input" type="radio" value="1" name="form[]">
+						<label for="c_1" class="radio__label"><img src="@img/popup/telegram.svg" class="radio__ico"></label>
+					</div>
+					<div class="popup__radio radio">
+						<input id="c_2" data-error="Ошибка" class="radio__input" type="radio" value="2" name="form[]">
+						<label for="c_2" class="radio__label"><img src="@img/popup/phone.svg" class="radio__ico"></label>
+					</div>
+					<div class="popup__radio radio">
+						<input id="c_3" data-error="Ошибка" class="radio__input" type="radio" value="3" name="form[]">
+						<label for="c_3" class="radio__label"><span class="radio__text">Позвонить</span></label>
+					</div>
+				</div>
+
+			</form>
+
+			<button class="cart__button button">Заказать в 1 клик</button>
+
+		</div>
+	</div>
+</div>
+
+<!-- popup THANK -->
+
+<div id="thank" aria-hidden="true" class="popup popup_thank">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__top">
+				<div class="popup__maintitle">Спасибо за заказ!</div>
+				<div class="popup__text">Наш менеджер свяжется с вами в ближайшее время!</div>
+			</div>
+
+			<div class="popup__items">
+				<div class="popup__item item-cart">
+					<div class="item-cart__image-ibg--contain"><img src="@img/header/01.jpg" alt="" loading="lazy"></div>
+					<div class="item-cart__content">
+						<div class="item-cart__content-text">
+							<div class="item-cart__article">Артикул: 115361736</div>
+							<div class="item-cart__text">Бренд</div>
+							<div class="item-cart__text">Межкомнатная дверь</div>
+							<div class="item-cart__lines">
+								<div class="item-cart__line">Категория: -</div>
+								<div class="item-cart__line">Серия: Никель </div>
+								<div class="item-cart__line">Цвет: зеленый</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a href="#" class="cart__button button">На главную</a>
+
 		</div>
 	</div>
 </div>

@@ -382,7 +382,6 @@ class SelectConstructor {
   getSelectElementContent(selectOption) {
     // Якщо для елемента вказано виведення картинки чи тексту, перебудовуємо конструкцію
     const selectOptionData = selectOption.dataset.asset ? `${selectOption.dataset.asset}` : ""
-    console.log(", selectOptionData", selectOptionData)
     const selectOptionDataHTML = selectOptionData
       ? `<span style="background-color: ${selectOptionData};" alt=""></span>`
       : ""

@@ -561,26 +561,62 @@
 
 .sub-item {
   &__title {
+    width: 100%;
+    display: block;
     color: #312200;
     font-size: toRem(20);
     font-weight: 300;
     line-height: 100%; /* 100% */
 
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: toRem(1);
-      bottom: toRem(-1);
-      left: 0;
-
-      background-color: #004d43;
-      opacity: 0;
-      transition: opacity 0.3s ease 0s;
+    ._spoller-init & {
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: em(7, 20);
+        right: 0;
+        transition: all 0.3s ease 0s;
+        margin: 0px 0px 0px toRem(-7);
+        background-color: #0e1e24;
+        width: toRem(14);
+        height: toRem(3);
+      }
+      &::before {
+        transform: rotate(-90deg);
+      }
+      &._spoller-active {
+        &::before {
+          transform: rotate(0);
+        }
+      }
     }
+
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #004d43;
+        &::before,
+        &::after {
+          background-color: #004d43;
+        }
+      }
+    }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   display: block;
+    //   width: 100%;
+    //   height: toRem(1);
+    //   bottom: toRem(-1);
+    //   left: 0;
+
+    //   background-color: #004d43;
+    //   opacity: 0;
+    //   transition: opacity 0.3s ease 0s;
+    // }
 
     &._spoller-active {
       &::after {

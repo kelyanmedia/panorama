@@ -148,3 +148,29 @@
 }
 
 //========================================================================================================================================================
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: toRem(5);
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    display: block;
+    width: toRem(15);
+    height: toRem(15);
+    background-color: #c6c8c7;
+    border-radius: 50%;
+
+    transition: background-color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #004d43;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #004d43;
+  }
+}
